@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Dividir la cuenta</string>
+    <string name="total_amount_hint">Total a pagar</string>
+    <string name="num_participants_hint">Número de participantes</string>
+    <string name="switch_tip_text">Añadir propina</string>
+    <string name="calculate_button">Calcular</string>
+    <string name="result_text">Monto por persona: </string>
+    <string name="tip_percentage_text">Propina: 0%</string>
+    <string name="enter_valid_total">Ingrese un monto total válido</string>
+    <string name="enter_valid_participants">Ingrese un número de participantes válido</string>
+</resources>

@@ -1,66 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
-    android:id="@+id/main">
+    android:padding="16dp">
 
-    <!-- Campo de Entrada para la Cantidad Total -->
     <EditText
         android:id="@+id/totalAmount"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Total a pagar"
+        android:hint="@string/total_amount_hint"
         android:inputType="numberDecimal"
-        android:layout_marginBottom="16dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!-- Campo de Entrada para Número de Participantes -->
     <EditText
         android:id="@+id/numParticipants"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Número de participantes"
+        android:hint="@string/num_participants_hint"
         android:inputType="number"
-        android:layout_marginBottom="16dp" />
+        app:layout_constraintTop_toBottomOf="@id/totalAmount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!-- Switch para activar/desactivar propina -->
     <Switch
         android:id="@+id/switchTip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Añadir propina"
-        android:layout_marginBottom="16dp" />
+        android:text="@string/switch_tip_text"
+        app:layout_constraintTop_toBottomOf="@id/numParticipants"
+        app:layout_constraintStart_toStartOf="parent"/>
 
-    <!-- Slider para seleccionar porcentaje de propina -->
     <com.google.android.material.slider.Slider
         android:id="@+id/sliderTip"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:valueFrom="0.0"
         android:valueTo="5.0"
         android:stepSize="1.0"
         android:enabled="false"
-        app:labelBehavior="gone"
-        android:layout_marginBottom="16dp"/>
+        app:layout_constraintTop_toBottomOf="@id/switchTip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!-- Botón para calcular el monto por persona -->
+    <TextView
+        android:id="@+id/tipPercentageText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/tip_percentage_text"
+        app:layout_constraintTop_toBottomOf="@id/sliderTip"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
     <Button
         android:id="@+id/buttonCalculate"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Calcular"
-        android:layout_marginTop="16dp" />
+        android:text="@string/calculate_button"
+        app:layout_constraintTop_toBottomOf="@id/tipPercentageText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-    <!-- TextView para mostrar el resultado -->
     <TextView
         android:id="@+id/resultText"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Monto por persona: "
+        android:text="@string/result_text"
         android:textSize="18sp"
-        android:layout_marginTop="16dp" />
+        app:layout_constraintTop_toBottomOf="@id/buttonCalculate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

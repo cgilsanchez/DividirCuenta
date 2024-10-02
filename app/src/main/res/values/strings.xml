@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">DividirCuenta</string>
+    <string name="app_name">Split the Bill</string>
+    <string name="total_amount_hint">Total to pay</string>
+    <string name="num_participants_hint">Number of participants</string>
+    <string name="switch_tip_text">Add tip</string>
+    <string name="calculate_button">Calculate</string>
+    <string name="result_text">Amount per person: </string>
+    <string name="tip_percentage_text">Tip: 0%</string>
+    <string name="enter_valid_total">Please enter a valid total amount</string>
+    <string name="enter_valid_participants">Please enter a valid number of participants</string>
 </resources>
